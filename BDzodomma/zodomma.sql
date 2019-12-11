@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-12-2019 a las 22:04:47
+-- Tiempo de generación: 11-12-2019 a las 22:17:19
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.3.1
 
@@ -21,6 +21,16 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `zodomma`
 --
+
+DELIMITER $$
+--
+-- Procedimientos
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SPRegistrarAdmin` (IN `_usuario` VARCHAR(30), IN `_contra` VARCHAR(100), IN `_pregunta` VARCHAR(50), IN `_respuesta` VARCHAR(50), IN `_tusuario` INT)  BEGIN
+Insert into tbl_usuario(id_usuario,pass,pregunta,respuesta,tipo) VALUES (_usuario,_contra,_pregunta,_respuesta,_tusuario);
+END$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -101,6 +111,14 @@ CREATE TABLE `tbl_usuario` (
   `respuesta` varchar(50) NOT NULL,
   `tipo` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tbl_usuario`
+--
+
+INSERT INTO `tbl_usuario` (`id_usuario`, `pass`, `pregunta`, `respuesta`, `tipo`) VALUES
+('Admin', '123456', '2', 'ranger', 1),
+('subadmin', '123456', 'Nombre del padre', 'antonio', 1);
 
 --
 -- Índices para tablas volcadas
