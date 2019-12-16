@@ -90,7 +90,6 @@
             this.txtcontraseña.PasswordChar = 'x';
             this.txtcontraseña.Size = new System.Drawing.Size(150, 20);
             this.txtcontraseña.TabIndex = 22;
-
             // 
             // txtusuario
             // 
@@ -187,6 +186,7 @@
             this.Controls.Add(this.lblcontraseña);
             this.Controls.Add(this.lblusuario);
             this.Controls.Add(this.lblTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

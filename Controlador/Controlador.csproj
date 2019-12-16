@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logueo\logueo.cs" />
+    <Compile Include="Logueo\loguinLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrarAdministrador\UAdministrador.cs" />
     <Compile Include="RegistrarAdministrador\UAdministradorLogica.cs" />
